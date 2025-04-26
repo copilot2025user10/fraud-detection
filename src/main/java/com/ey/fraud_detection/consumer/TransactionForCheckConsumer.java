@@ -16,6 +16,10 @@ public class TransactionForCheckConsumer {
     @KafkaListener(topics = "{transaction.fraud.check.topic}", groupId = "${spring.kafka.group-id}")
     public void listen(String message) {
         System.out.println("Received Message: " + message);
+
+        //Add business logic
+
+
         notificationProducer.sendMessage(message);
     }
 }

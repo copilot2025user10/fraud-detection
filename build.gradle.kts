@@ -22,6 +22,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	implementation("org.postgresql:postgresql:42.6.0")
+	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+	implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+	implementation("jakarta.validation:jakarta.validation-api:3.0.2")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
 	implementation("org.springframework.kafka:spring-kafka:3.3.4")
 }
