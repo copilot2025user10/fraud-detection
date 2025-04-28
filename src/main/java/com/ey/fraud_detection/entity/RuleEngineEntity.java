@@ -1,31 +1,39 @@
 package com.ey.fraud_detection.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.sql.Timestamp;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "ruleDefinition")
 public class RuleEngineEntity {
 
     @Id
-    private Long id;
-    private String columnName;
+    @Column(name = "ruleid")
+    private String ruleId;
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
-    }
+    @Column(name = "ruleType")
+    private String ruleType;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column(name = "ruleDescription")
+    private String ruleDescription;
 
-    public String getColumnName() {
-        return columnName;
-    }
+    @Column(name = "riskScore")
+    private Integer riskScore;
 
-    public void setColumnName(String columnName) {
-        this.columnName = columnName;
-    }
+    @Column(name = "ruleCreationDate")
+    private Timestamp ruleCreationDate;
+
+    @Column(name = "ruleValue")
+    private String ruleValue;
+
 }

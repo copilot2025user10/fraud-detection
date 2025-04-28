@@ -22,11 +22,17 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-	implementation("org.postgresql:postgresql:42.6.0")
-	implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
-	implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
-	implementation("jakarta.validation:jakarta.validation-api:3.0.2")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	implementation("org.springframework.boot:spring-boot-starter-cache")
+	implementation("javax.validation:validation-api:2.0.1.Final")
+	implementation("org.apache.commons:commons-lang3:3.12.0")
+	implementation("org.postgresql:postgresql:42.7.5")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:3.4.5")
+	implementation("com.opencsv:opencsv:5.10")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.6")
+
+	compileOnly("org.projectlombok:lombok:1.18.38")
+	annotationProcessor("org.projectlombok:lombok")
 
 	implementation("org.springframework.kafka:spring-kafka:3.3.4")
 }

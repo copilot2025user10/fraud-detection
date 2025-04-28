@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 public class RuleEngineController {
 
-    final RuleEngineService service;
+    RuleEngineService service;
 
     public RuleEngineController(RuleEngineService service) {
         this.service = service;
