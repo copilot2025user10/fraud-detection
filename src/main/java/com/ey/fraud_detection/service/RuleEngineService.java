@@ -30,9 +30,9 @@ public class RuleEngineService {
         RuleEngineUtils reUtils = new RuleEngineUtils();
         for (RuleEngineEntity rule : rules) {
             // Example business logic: Append a prefix to the rule name
-            String processedRule = "Processed_" + rule.getColumnName();
+        //    String processedRule = "Processed_" + rule.getColumnName();
             String ruleResult = reUtils.ruleResult(10000);
-            processedRules.add(processedRule);
+         //   processedRules.add(processedRule);
         }
         return processedRules;
     }
