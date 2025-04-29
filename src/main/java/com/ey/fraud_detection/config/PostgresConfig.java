@@ -49,7 +49,7 @@ public class PostgresConfig {
     public LocalContainerEntityManagerFactoryBean postgresEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(postgresDataSource())
-                .packages("com.ey.in.entity")
+                .packages("com.ey.fraud_detection.entity")
                 .persistenceUnit("postgres")
                 .properties(jpaProperties())
                 .build();

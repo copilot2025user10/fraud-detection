@@ -22,7 +22,8 @@ public class RuleEngineService {
     }
 
     public List<RuleEngineEntity> getRulesByColumnName(String columnName) {
-        return repository.findByColumnName(columnName);
+        //return repository.findByColumnName(columnName);
+        return null;
     }
 
     public List<String> processRules(List<RuleEngineEntity> rules) {

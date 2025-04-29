@@ -1,11 +1,13 @@
 package com.ey.fraud_detection.config;
 
+import com.ey.fraud_detection.entity.RuleEngineEntity;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.time.Duration;
@@ -32,10 +34,17 @@ public class RedisConfig {
                 .build();
         return new LettuceConnectionFactory(config,clientConfig);
     }
-
+/*
     @Bean
     public StringRedisTemplate redisTemplate() {
         StringRedisTemplate template = new StringRedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory());
+        return template;
+    }*/
+
+    @Bean
+    RedisTemplate<String, RuleEngineEntity> redisTemplate() {
+        RedisTemplate<String, RuleEngineEntity> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory());
         return template;
     }

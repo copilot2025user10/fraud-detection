@@ -13,7 +13,7 @@ public class TransactionForCheckConsumer {
         this.notificationProducer = notificationProducer;
     }
 
-    @KafkaListener(topics = "{transaction.fraud.check.topic}", groupId = "${spring.kafka.group-id}")
+    @KafkaListener(topics = "transaction-valid-output", groupId = "fraud-detection-group")
     public void listen(String message) {
         System.out.println("Received Message: " + message);
 

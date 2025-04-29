@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface RuleEngineRepository extends JpaRepository<RuleEngineEntity, Long> {
-    @Query("SELECT r FROM RuleEngineEntity r WHERE r.columnName = :columnName")
-    List<RuleEngineEntity> findByColumnName(String columnName);
+    /*@Query("SELECT r FROM RuleEngineEntity r WHERE r.columnName = :columnName")
+    List<RuleEngineEntity> findByColumnName(String columnName);*/
 }
