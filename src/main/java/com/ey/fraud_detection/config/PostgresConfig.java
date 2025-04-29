@@ -50,7 +50,7 @@ public class PostgresConfig {
         return builder
                 .dataSource(postgresDataSource())
                 .packages("com.ey.fraud_detection.entity")
-                .persistenceUnit("postgres")
+                //.persistenceUnit("postgres")
                 .properties(jpaProperties())
                 .build();
     }

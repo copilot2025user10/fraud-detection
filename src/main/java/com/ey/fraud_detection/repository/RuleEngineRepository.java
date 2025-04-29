@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RuleEngineRepository extends JpaRepository<RuleEngineEntity, Long> {
-    /*@Query("SELECT r FROM RuleEngineEntity r WHERE r.columnName = :columnName")
-    List<RuleEngineEntity> findByColumnName(String columnName);*/
+public interface RuleEngineRepository extends JpaRepository<RuleEngineEntity, Integer> {
+    //@Query("SELECT r FROM ruleDefinition r")
+    //List<RuleEngineEntity> findRules();
 }

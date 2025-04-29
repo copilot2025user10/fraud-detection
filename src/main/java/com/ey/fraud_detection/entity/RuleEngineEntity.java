@@ -12,28 +12,26 @@ import java.sql.Timestamp;
 
 @Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "ruleDefinition")
+@Table(name = "ruledefinition")
 public class RuleEngineEntity {
 
     @Id
     @Column(name = "ruleid")
-    private String ruleId;
+    private Integer ruleId;
 
-    @Column(name = "ruleType")
+    @Column(name = "ruletype")
     private String ruleType;
 
-    @Column(name = "ruleDescription")
+    @Column(name = "ruledescription")
     private String ruleDescription;
 
-    @Column(name = "riskScore")
+    @Column(name = "riskscore")
     private Integer riskScore;
 
-    @Column(name = "ruleCreationDate")
+    @Column(name = "rulecreationdate")
     private Timestamp ruleCreationDate;
 
-    @Column(name = "ruleValue")
+    @Column(name = "rulevalue")
     private String ruleValue;
 
 }
