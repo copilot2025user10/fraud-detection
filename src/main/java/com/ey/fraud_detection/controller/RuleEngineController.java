@@ -3,6 +3,7 @@ package com.ey.fraud_detection.controller;
 import com.ey.fraud_detection.consumer.TransactionForCheckConsumer;
 import com.ey.fraud_detection.entity.RuleEngineEntity;
 import com.ey.fraud_detection.service.RuleEngineService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,8 +35,7 @@ public class RuleEngineController {
     }
 
     @GetMapping("/test")
-    public void test()
-    {
+    public void test() throws JsonProcessingException {
         tx.listen(null);
     }
 
